@@ -1,0 +1,30 @@
+{
+  "name": "react-js-fall-2024",
+  "version": "1.0.0",
+  "description": "Learning React JS",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bongodev/react-fall-2024.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bongodev/react-fall-2024/issues"
+  },
+  "homepage": "https://github.com/bongodev/react-fall-2024#readme"
+}
