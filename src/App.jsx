@@ -1,20 +1,11 @@
-import { useState } from 'react';
+import { Projects } from './components';
 
-function Counter({ count, increaseCount }) {
-  return (
-    <div>
-      <h1 className="text-3xl">Count: {count}</h1>
-      <button onClick={increaseCount}>+</button>
-    </div>
-  );
-}
+import { projects } from './data';
 
 export default function App() {
-  const [count, setCount] = useState(0);
-
-  const increaseCount = () => {
-    setCount(count + 1);
-  };
-
-  return <Counter count={count} increaseCount={increaseCount} />;
+  return (
+    <div className="app">
+      <Projects projects={projects} />
+    </div>
+  );
 }
