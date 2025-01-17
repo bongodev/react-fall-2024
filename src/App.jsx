@@ -3,7 +3,7 @@ import { useState } from 'react';
 function Counter({ count, increaseCount }) {
   return (
     <div>
-      <h1>Count: {count}</h1>
+      <h1 className="text-3xl">Count: {count}</h1>
       <button onClick={increaseCount}>+</button>
     </div>
   );
