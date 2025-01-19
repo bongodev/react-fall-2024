@@ -1,8 +1,11 @@
+import clsx from 'clsx';
 import { useState } from 'react';
 
+import { useTheme } from '../../hooks';
 import { ProjectPropType } from '../propTypesDefs';
 
 export const Project = ({ project }) => {
+  const { isDarkMode } = useTheme();
   const [selectedContributor, setSelectedContributor] = useState();
 
   return (
@@ -12,7 +15,12 @@ export const Project = ({ project }) => {
         {project.contributors.map((contributor) => (
           <button
             key={contributor}
-            className="text-sm font-medium text-gray-500 hover:text-gray-700 border border-gray-200 rounded-md px-4 py-2"
+            className={clsx(
+              'text-sm font-medium text-gray-500 hover:text-gray-700 border border-gray-200 rounded-md px-4 py-2',
+              isDarkMode
+                ? 'text-gray-300 hover:text-gray-400 border-gray-600'
+                : 'text-gray-500 hover:text-gray-700 border-gray-200'
+            )}
             onClick={() => setSelectedContributor(contributor)}
           >
             {contributor}
