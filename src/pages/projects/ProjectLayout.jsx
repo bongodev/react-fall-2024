@@ -1,12 +1,12 @@
 import { useParams, useSearchParams } from 'react-router';
 
-import { projects } from '@/data';
+import { useProjects } from '@/hooks';
 
 export const ProjectLayout = () => {
   const { projectId } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const project = projects.find((project) => project.id === projectId);
+  const { getProject } = useProjects();
 
   const handleContributorSelection = (contributor) => {
     setSearchParams((prev) => ({
@@ -14,6 +14,8 @@ export const ProjectLayout = () => {
       contributor: contributor.split(' ').join('-').toLowerCase(),
     }));
   };
+
+  const project = getProject(projectId);
 
   if (!project) {
     return <div>404 | Project not found</div>;
