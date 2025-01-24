@@ -1,6 +1,7 @@
 import { useParams, useSearchParams } from 'react-router';
 
 import { useProjects } from '@/hooks';
+import { ProjectRenderer } from '@/components';
 
 export const ProjectLayout = () => {
   const { projectId } = useParams();
@@ -16,6 +17,7 @@ export const ProjectLayout = () => {
   };
 
   const project = getProject(projectId);
+  const selectedContributor = searchParams.get('contributor');
 
   if (!project) {
     return <div>404 | Project not found</div>;
@@ -42,8 +44,14 @@ export const ProjectLayout = () => {
           </ul>
         </div>
         <div className="w-4/5 min-h-[400px] border border-gray-300 p-4">
-          <h2>Details</h2>
-          <p>Details about the project will be shown here.</p>
+          {selectedContributor ? (
+            <ProjectRenderer
+              projectId={projectId}
+              contributorId={selectedContributor}
+            />
+          ) : (
+            <div>Select a contributor to view their project</div>
+          )}
         </div>
       </div>
     </div>
