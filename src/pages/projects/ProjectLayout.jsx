@@ -39,7 +39,9 @@ export const ProjectLayout = () => {
         </div>
         <p>{project.description}</p>
       </div>
-      <Outlet />
+      <div className="px-4 py-2 bg-gray-300 flex justify-center items-center">
+        <Outlet />
+      </div>
     </div>
   );
 };

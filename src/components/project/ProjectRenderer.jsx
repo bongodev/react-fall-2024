@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Counter as BongoDevCounter } from '../../contributors/bongodev';
+import { Counter as BongoDevCounter } from '../bongodev';
 
 const projects = {
   'counter-app': { bongodev: <BongoDevCounter /> },
