@@ -1,23 +1,24 @@
-import { useParams, useSearchParams } from 'react-router';
+import { Outlet, useParams } from 'react-router';
+import Select from 'react-select';
 
 import { useProjects } from '@/hooks';
-import { ProjectRenderer } from '@/components';
+import { useContributor } from './useContributor';
+
+const options = [
+  { value: 'bongodev', label: 'bongoDev' },
+  { value: 'talha', label: 'Talha' },
+  { value: 'sumaiya', label: 'Sumaiya' },
+];
 
 export const ProjectLayout = () => {
   const { projectId } = useParams();
-  const [searchParams, setSearchParams] = useSearchParams();
 
   const { getProject } = useProjects();
-
-  const handleContributorSelection = (contributor) => {
-    setSearchParams((prev) => ({
-      ...prev,
-      contributor: contributor.split(' ').join('-').toLowerCase(),
-    }));
-  };
+  const { selectedContributor, handleContributorChange } = useContributor({
+    projectId,
+  });
 
   const project = getProject(projectId);
-  const selectedContributor = searchParams.get('contributor');
 
   if (!project) {
     return <div>404 | Project not found</div>;
@@ -25,35 +26,20 @@ export const ProjectLayout = () => {
 
   return (
     <div className="flex flex-col gap-6 px-4 py-2">
+      {console.log('ProjectLayout rendered')}
       <div>
-        <h1>{project.name}</h1>
+        <div className="flex justify-between items-center">
+          <h1>{project.name}</h1>
+          <Select
+            placeholder="Contributors"
+            value={selectedContributor}
+            options={options}
+            onChange={handleContributorChange}
+          />
+        </div>
         <p>{project.description}</p>
       </div>
-      <div className="flex gap-4">
-        <div className="w-1/5">
-          <h2>Contributors</h2>
-          <ul className="list-disc list-inside">
-            {project.contributors.map((contributor) => (
-              <li
-                key={contributor}
-                onClick={() => handleContributorSelection(contributor)}
-              >
-                {contributor}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="w-4/5 min-h-[400px] border border-gray-300 p-4">
-          {selectedContributor ? (
-            <ProjectRenderer
-              projectId={projectId}
-              contributorId={selectedContributor}
-            />
-          ) : (
-            <div>Select a contributor to view their project</div>
-          )}
-        </div>
-      </div>
+      <Outlet />
     </div>
   );
 };
