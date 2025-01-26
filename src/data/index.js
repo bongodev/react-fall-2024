@@ -17,4 +17,10 @@ export const projects = [
     description: 'A simple grade calculator app.',
     contributors: [],
   },
+  {
+    id: 'render-products',
+    name: 'Render Products',
+    description: 'A simple product rendering app using useEffect hook.',
+    contributors: ['bongoDev'],
+  },
 ];

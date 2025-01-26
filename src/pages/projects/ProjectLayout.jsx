@@ -26,7 +26,6 @@ export const ProjectLayout = () => {
 
   return (
     <div className="flex flex-col gap-6 px-4 py-2">
-      {console.log('ProjectLayout rendered')}
       <div>
         <div className="flex justify-between items-center">
           <h1>{project.name}</h1>
