@@ -3,13 +3,13 @@ export const projects = [
     id: 'counter-app',
     name: 'Counter App',
     description: 'A simple counter app.',
-    contributors: ['bongoDev', 'talha', 'nazma', 'abu taher', 'thanwin'],
+    contributors: ['bongoDev', 'talha', 'nazma', 'abu taher', 'thanwin', 'sumiya'],
   },
   {
     id: 'number-comparator',
     name: 'Number Comparator',
     description: 'A simple number comparator app.',
-    contributors: ['bongoDev', 'shobuz', 'sumaiya', 'thanwin'],
+    contributors: ['bongoDev', 'shobuz', 'sumiya', 'thanwin'],
   },
   {
     id: 'grade-calculator',
