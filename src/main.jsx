@@ -6,6 +6,7 @@ import App from './App';
 import { AboutPage, ProjectLayout, RootLayout } from '@/pages';
 import { BongoDevProjectPage } from '@/pages/bongodev';
 import { ThanWinProjectPage } from '@/pages/thanwin';
+import { TalhaProjectPage } from '@/pages/talha';
 
 import './index.css';
 
@@ -18,7 +19,7 @@ root.render(
           <Route index element={<App />} />
           <Route path="projects/:projectId" element={<ProjectLayout />}>
             <Route path="bongodev" element={<BongoDevProjectPage />} />
-            <Route path="talha" element={<h1>Talha</h1>} />
+            <Route path="talha" element={<TalhaProjectPage />} />
             <Route path="sumaiya" element={<h1>Sumaiya</h1>} />
             <Route path="thanwin" element={<ThanWinProjectPage />} />
           </Route>
