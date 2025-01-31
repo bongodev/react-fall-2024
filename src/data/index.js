@@ -10,13 +10,14 @@ export const projects = [
       'abu taher',
       'thanwin',
       'promi',
+      'sumiya'
     ],
   },
   {
     id: 'number-comparator',
     name: 'Number Comparator',
     description: 'A simple number comparator app.',
-    contributors: ['bongoDev', 'shobuz', 'sumaiya', 'thanwin', 'promi'],
+    contributors: ['bongoDev', 'shobuz', 'sumiya', 'thanwin', 'promi'],
   },
   {
     id: 'grade-calculator',
