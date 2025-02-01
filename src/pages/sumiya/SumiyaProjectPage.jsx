@@ -3,6 +3,8 @@ import  Counter from '../../components/sumiya/counter/src/App';
 import { ThemeProvider } from '../../components/sumiya/counter/src/contexts';
 import NumberComparator from '../../components/sumiya/number-comparator/src/NumberComparatorProject'
 import { ThemeProvider as NumberComparatorTheme } from '../../components/sumiya/number-comparator/src/components/contexts/themeContext/ThemeProvider'
+import { GradeCalculator } from '../../components/sumiya/grade-calculator/gradeCalculator';
+
 
 export const SumiyaProjectPage = () => {
   const { projectId } = useParams();
@@ -19,7 +21,12 @@ export const SumiyaProjectPage = () => {
       </NumberComparatorTheme>
      
     ),
-   
+    'grade-calculator':(
+      <ThemeProvider>
+        <GradeCalculator/>
+      </ThemeProvider>
+     
+    )
   };
 
   const selectedProject = componentMap[projectId];
