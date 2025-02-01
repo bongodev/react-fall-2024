@@ -22,13 +22,8 @@ root.render(
           <Route index element={<App />} />
           <Route path="projects/:projectId" element={<ProjectLayout />}>
             <Route path="bongodev" element={<BongoDevProjectPage />} />
-<<<<<<< HEAD
             <Route path="talha" element={<TalhaProjectPage />} />
-            <Route path="sumaiya" element={<h1>Sumaiya</h1>} />
-=======
-            <Route path="talha" element={<h1>Talha</h1>} />
             <Route path="sumiya" element={<SumiyaProjectPage/>} />
->>>>>>> 70180b2 (Add counter app project)
             <Route path="thanwin" element={<ThanWinProjectPage />} />
           </Route>
           <Route path="about" element={<AboutPage />} />
