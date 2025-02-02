@@ -25,6 +25,12 @@ export const projects = [
     contributors: ['thanwin', 'promi'],
   },
   {
+    id: 'multiplication-table',
+    name: 'Multiplication Table',
+    description: 'A simple multiplication table app.',
+    contributors: ['talha'],
+  },
+  {
     id: 'render-products',
     name: 'Render Products',
     description: 'A simple product rendering app using useEffect hook.',
