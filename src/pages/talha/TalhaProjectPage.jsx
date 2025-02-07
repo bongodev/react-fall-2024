@@ -1,5 +1,6 @@
 import { useParams } from 'react-router';
-import { Counter, NumberComparator,GradeCalculator,MultiplicationTable } from '@/components/talha';
+import { Counter, NumberComparator,GradeCalculator,MultiplicationTable,RenderProducts } from '@/components/talha';
+
 
 export const TalhaProjectPage = () => {
   const { projectId } = useParams();
@@ -9,6 +10,7 @@ export const TalhaProjectPage = () => {
     'number-comparator': <NumberComparator />,
     'grade-calculator': <GradeCalculator />,
     'multiplication-table': <MultiplicationTable />,
+    'render-products': <RenderProducts />,
   };
 
   const selectedProject = componentMap[projectId];
