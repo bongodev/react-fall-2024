@@ -13,5 +13,5 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  base: '/react-fall-2024/',
+  base: process.env.NODE_ENV === 'production' ? '/react-fall-2024/' : '/',
 });
