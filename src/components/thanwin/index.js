@@ -1,4 +1,5 @@
 import Counter from './counter/Counter';
 import GradeCalculator from './grade-calculator/GradeCalculator';
 
-export { Counter, GradeCalculator };
+import NumberComparator from './number-comparator/NumberComparator';
+export { Counter, GradeCalculator, NumberComparator };

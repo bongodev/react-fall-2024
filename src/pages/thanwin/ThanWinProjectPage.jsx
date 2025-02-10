@@ -1,5 +1,9 @@
 import { useParams } from 'react-router';
-import { Counter, GradeCalculator } from '@/components/thanwin';
+import {
+  Counter,
+  NumberComparator,
+  GradeCalculator,
+} from '@/components/thanwin';
 
 export const ThanWinProjectPage = () => {
   const { projectId } = useParams();
@@ -7,6 +11,7 @@ export const ThanWinProjectPage = () => {
   const componentMap = {
     'counter-app': <Counter />,
     'grade-calculator': <GradeCalculator />,
+    'number-comparator': <NumberComparator />,
   };
 
   const selectedProject = componentMap[projectId];
