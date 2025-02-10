@@ -10,11 +10,7 @@ export const projects = [
       'abu taher',
       'thanwin',
       'promi',
-<<<<<<< HEAD
       'sumiya'
-=======
-      'sumiya',
->>>>>>> main
     ],
   },
   {
