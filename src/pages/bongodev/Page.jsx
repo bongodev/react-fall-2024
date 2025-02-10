@@ -1,5 +1,9 @@
 import { useParams } from 'react-router';
-import { Counter, RenderProducts } from '@/components/bongodev';
+import {
+  Counter,
+  NumberComparator,
+  RenderProducts,
+} from '@/components/bongodev';
 
 export const BongoDevProjectPage = () => {
   const { projectId } = useParams();
@@ -7,6 +11,7 @@ export const BongoDevProjectPage = () => {
   const componentMap = {
     'counter-app': <Counter />,
     'render-products': <RenderProducts />,
+    'number-comparator': <NumberComparator />,
   };
 
   const selectedProject = componentMap[projectId];

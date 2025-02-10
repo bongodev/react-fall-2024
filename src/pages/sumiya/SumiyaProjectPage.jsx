@@ -27,6 +27,7 @@ export const SumiyaProjectPage = () => {
       </ThemeProvider>
      
     )
+   
   };
 
   const selectedProject = componentMap[projectId];
