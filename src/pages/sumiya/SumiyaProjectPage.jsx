@@ -4,6 +4,7 @@ import { ThemeProvider } from '../../components/sumiya/counter/src/contexts';
 import NumberComparator from '../../components/sumiya/number-comparator/src/NumberComparatorProject'
 import { ThemeProvider as NumberComparatorTheme } from '../../components/sumiya/number-comparator/src/components/contexts/themeContext/ThemeProvider'
 import { GradeCalculator } from '../../components/sumiya/grade-calculator/gradeCalculator';
+import MultiplicationTable from '../../components/sumiya/multiplication-table/MultiplicationTable';
 
 
 export const SumiyaProjectPage = () => {
@@ -26,7 +27,9 @@ export const SumiyaProjectPage = () => {
         <GradeCalculator/>
       </ThemeProvider>
      
-    )
+    ),
+    'multiplication-table': <MultiplicationTable/>
+
    
   };
 
