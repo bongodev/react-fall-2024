@@ -23,7 +23,13 @@ export const projects = [
     id: 'grade-calculator',
     name: 'Grade Calculator',
     description: 'A simple grade calculator app.',
-    contributors: ['thanwin', 'promi'],
+    contributors: ['thanwin', 'promi', 'sumiya'],
+  },
+  {
+      id: 'multiplication-table',
+      name: 'Multiplication Table',
+      description: 'A simple multiplication table app.',
+      contributors: [     , 'sumiya'],
   },
   {
     id: 'multiplication-table',
