@@ -32,6 +32,12 @@ export const projects = [
       contributors: [     , 'sumiya'],
   },
   {
+    id: 'number-table-1-10',
+    name: 'Number Table of 1-10',
+    description: 'A simple Number Table render app.',
+    contributors: ['sumiya'],
+},
+  {
     id: 'render-products',
     name: 'Render Products',
     description: 'A simple product rendering app using useEffect hook.',
