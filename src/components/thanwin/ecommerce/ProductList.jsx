@@ -14,7 +14,7 @@ const ProductList = ({ products }) => {
         return (
           <Product
             key={product.id}
-            imgSrc={product.url}
+            imgSrc={product.images[1]}
             title={product.title}
             id={product.id}
             price={product.price}

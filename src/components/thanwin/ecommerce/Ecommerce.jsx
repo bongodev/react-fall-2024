@@ -1,17 +1,21 @@
 import ProductList from './ProductList';
-import { products } from '../products';
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import FilterContainer from './FilterContainer';
 import Cart from './Cart';
 import CartIcon from './CartIcon';
+import { useProducts } from './useProducts';
 
 const ecommerceContext = createContext(undefined);
-const categories = Array.from(
-  new Set(products.map((product) => product.category))
-);
+const getCategories = (products) => {
+  return Array.from(new Set(products?.map((product) => product.category)));
+};
 const Ecommerce = () => {
-  const [productList, setProductList] = useState(products);
+  const { data: products, isLoading } = useProducts();
+  const [productList, setProductList] = useState([]);
+  console.log(productList);
+
   const [selectedCategories, setSelectedCategories] = useState([]);
+
   const [cartItems, setCartItems] = useState(() => {
     const carts = localStorage.getItem('carts');
     if (carts) {
@@ -72,6 +76,14 @@ const Ecommerce = () => {
     setCartItems(newCartItems);
     localStorage.setItem('carts', JSON.stringify(newCartItems));
   }
+
+  useEffect(() => {
+    setProductList(products);
+  }, [products]);
+
+  if (isLoading) {
+    return <h1 className="">Loading...</h1>;
+  }
   return (
     <ecommerceContext.Provider
       value={{
@@ -94,7 +106,7 @@ const Ecommerce = () => {
           <CartIcon showCart={toggleShowCart} count={cartItems.length} />
         </div>
         <div>
-          <FilterContainer categories={categories} />
+          <FilterContainer categories={getCategories(products)} />
           <ProductList products={productList} />
         </div>
         {showCart && (
