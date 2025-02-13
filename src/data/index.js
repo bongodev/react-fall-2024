@@ -25,17 +25,12 @@ export const projects = [
     description: 'A simple grade calculator app.',
     contributors: ['thanwin', 'promi', 'sumiya'],
   },
+ 
   {
     id: 'multiplication-table',
     name: 'Multiplication Table',
     description: 'A simple multiplication table app.',
-    contributors: [, 'sumiya'],
-  },
-  {
-    id: 'multiplication-table',
-    name: 'Multiplication Table',
-    description: 'A simple multiplication table app.',
-    contributors: ['talha'],
+    contributors: ['talha', 'sumiya'],
   },
   {
     id: 'number-table-1-10',
@@ -43,17 +38,12 @@ export const projects = [
     description: 'A simple Number Table render app.',
     contributors: ['sumiya'],
   },
-  {
-    id: 'number-table-1-10',
-    name: 'Number Table of 1-10',
-    description: 'A simple Number Table render app.',
-    contributors: ['sumiya'],
-},
+
   {
     id: 'render-products',
     name: 'Render Products',
     description: 'A simple product rendering app using useEffect hook.',
-    contributors: ['bongoDev', 'thanwin', 'promi'],
+    contributors: ['bongoDev', 'thanwin', 'promi', 'sumiya'],
   },
   {
     id: 'simple-ecommerce',
