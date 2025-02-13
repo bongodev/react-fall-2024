@@ -1,13 +1,13 @@
-import { useEcommerceContext } from './Ecommerce';
+import { useEcommerceContext } from './ecommerContext';
 import FilterButton from './FilterButton';
 
-const FilterContainer = ({ categories }) => {
-  const { handleClear } = useEcommerceContext();
+const FilterContainer = () => {
+  const { handleClear, categories } = useEcommerceContext();
   return (
     <div className="flex gap-3 justify-center mb-4">
       <button
         onClick={handleClear}
-        className="bg-slate-700  text-slate-100 hover:bg-slate-800 cursor-pointer px-4 py-2 rounded-md"
+        className="bg-gray-300  text-slate-800 hover:bg-gray-700 hover:text-slate-100 cursor-pointer px-4 py-2 rounded-md"
       >
         Clear
       </button>
