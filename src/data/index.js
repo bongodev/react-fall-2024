@@ -26,22 +26,16 @@ export const projects = [
     contributors: ['thanwin', 'promi', 'sumiya'],
   },
   {
-    id: 'multiplication-table',
-    name: 'Multiplication Table',
-    description: 'A simple multiplication table app.',
-    contributors: [, 'sumiya'],
+      id: 'multiplication-table',
+      name: 'Multiplication Table',
+      description: 'A simple multiplication table app.',
+      contributors: [     , 'sumiya'],
   },
   {
     id: 'multiplication-table',
     name: 'Multiplication Table',
     description: 'A simple multiplication table app.',
     contributors: ['talha'],
-  },
-  {
-    id: 'number-table-1-10',
-    name: 'Number Table of 1-10',
-    description: 'A simple Number Table render app.',
-    contributors: ['sumiya'],
   },
   {
     id: 'render-products',
