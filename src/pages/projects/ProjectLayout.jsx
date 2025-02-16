@@ -7,7 +7,7 @@ import { useContributor } from './useContributor';
 const options = [
   { value: 'bongodev', label: 'bongoDev' },
   { value: 'talha', label: 'Talha' },
-  { value: 'sumiya', label: 'Sumiya' },
+  { value: 'sumaiya', label: 'Sumaiya' },
   { value: 'thanwin', label: 'Than Win' },
 ];
 
