@@ -16,13 +16,13 @@ export const projects = [
     id: 'number-comparator',
     name: 'Number Comparator',
     description: 'A simple number comparator app.',
-    contributors: ['bongoDev', 'shobuz', 'sumaiya', 'thanwin', 'promi'],
+    contributors: ['bongoDev', 'shobuz', 'sumaiya', 'thanwin', 'promi','talha'],
   },
   {
     id: 'grade-calculator',
     name: 'Grade Calculator',
     description: 'A simple grade calculator app.',
-    contributors: ['thanwin', 'promi'],
+    contributors: ['thanwin', 'promi','talha'],
   },
   {
     id: 'multiplication-table',
@@ -34,12 +34,12 @@ export const projects = [
     id: 'render-products',
     name: 'Render Products',
     description: 'A simple product rendering app using useEffect hook.',
-    contributors: ['bongoDev', 'thanwin', 'promi'],
+    contributors: ['bongoDev', 'thanwin', 'promi','talha'],
   },
   {
     id: 'simple-ecommerce',
     name: 'A simple Ecommerce project',
     description: 'A simple Ecommerce project',
-    contributors: ['bongoDev', 'thanwin', 'promi'],
+    contributors: ['bongoDev', 'thanwin', 'promi','talha'],
   },
 ];
