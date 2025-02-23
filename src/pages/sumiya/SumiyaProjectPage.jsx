@@ -1,5 +1,5 @@
 import { useParams } from 'react-router';
-import { Counter, ThemeProvider } from '../../components/sumiya';
+import { Counter, NumberComparator, ThemeProvider } from '../../components/sumiya';
 
 
 export const SumiyaProjectPage = () => {
@@ -9,7 +9,8 @@ export const SumiyaProjectPage = () => {
     'counter-app':
     <ThemeProvider>
      <Counter/>,
-     </ThemeProvider>
+     </ThemeProvider>,
+     'number-comparator': <NumberComparator />,
   };
 
   const selectedProject = componentMap[projectId];
