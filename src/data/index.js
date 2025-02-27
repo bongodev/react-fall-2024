@@ -23,19 +23,19 @@ export const projects = [
     id: 'grade-calculator',
     name: 'Grade Calculator',
     description: 'A simple grade calculator app.',
-    contributors: ['thanwin', 'promi','talha'],
+    contributors: ['thanwin', 'promi','talha','sumiya'],
   },
   {
     id: 'multiplication-table',
     name: 'Multiplication Table',
     description: 'A simple multiplication table app.',
-    contributors: ['talha'],
+    contributors: ['talha','sumiya'],
   },
   {
     id: 'render-products',
     name: 'Render Products',
     description: 'A simple product rendering app using useEffect hook.',
-    contributors: ['bongoDev', 'thanwin', 'promi','talha'],
+    contributors: ['bongoDev', 'thanwin', 'promi','talha','sumiya'],
   },
   {
     id: 'simple-ecommerce',
