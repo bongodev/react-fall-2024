@@ -1,5 +1,10 @@
 import { useParams } from 'react-router';
-import { Counter, ThemeProvider } from '../../components/sumiya';
+import { Counter, NumberComparator, ThemeProvider } from '../../components/sumiya';
+import { GradeCalculator } from '../../components/sumiya/grade-calculator';
+import MultiplicationTable from '../../components/sumiya/multiplication-table/MultiplicationTable';
+import { App } from '../../components/sumiya/render-products';
+
+
 
 
 export const SumiyaProjectPage = () => {
@@ -9,7 +14,14 @@ export const SumiyaProjectPage = () => {
     'counter-app':
     <ThemeProvider>
      <Counter/>,
-     </ThemeProvider>
+     </ThemeProvider>,
+     'number-comparator': <NumberComparator />,
+     'grade-calculator' : 
+     <ThemeProvider>
+     <GradeCalculator />
+     </ThemeProvider>,
+     'multiplication-table': <MultiplicationTable />,
+     'render-products': <App />
   };
 
   const selectedProject = componentMap[projectId];

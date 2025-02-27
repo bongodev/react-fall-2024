@@ -1,3 +1,7 @@
 export * from './Hooks'
 export * from './themeContext'
 export * from './counter'
+export * from './number-comparator'
+export * from './grade-calculator'
+export * from './multiplication-table'
+export *from './render-products'
